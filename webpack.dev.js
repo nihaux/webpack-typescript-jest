@@ -10,13 +10,14 @@ module.exports = merge(common, {
     new ForkTsCheckerWebpackPlugin({
       async: false, // inject error in webpack
     }),
-    new ForkTsCheckerNotifierWebpackPlugin({ excludeWarnings: true }),
+    new ForkTsCheckerNotifierWebpackPlugin({ excludeWarnings: true, skipSuccessful: true }),
   ],
   devServer: {
     clientLogLevel: 'warning',
     contentBase: './dist',
     hot: true,
     stats: 'errors-only',
+    overlay: true,
   },
   module: {
     rules: [
