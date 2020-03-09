@@ -8,6 +8,10 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "debug": "webpack-dev-server --config webpack.dev.debug.js",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "tw": "yarn test:watch",
+    "test:coverage": "jest --coverage",
+    "tc": "yarn test:coverage",
     "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
