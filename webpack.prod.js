@@ -12,4 +12,13 @@ module.exports = merge(common, {
       chunks: 'all',
     },
   },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        include: path.resolve(__dirname, 'src'),
+      },
+    ],
+  },
 });

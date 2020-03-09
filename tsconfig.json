@@ -6,6 +6,9 @@
     "module": "es6",
     "target": "es5",
     "jsx": "react",
-    "allowJs": false
-  }
+    "allowJs": false,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
