@@ -14,7 +14,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -22,19 +22,22 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+        include: path.resolve(__dirname, 'src'),
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader'],
+        include: path.resolve(__dirname, 'src'),
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader'],
+        include: path.resolve(__dirname, 'src'),
       },
     ],
   },
