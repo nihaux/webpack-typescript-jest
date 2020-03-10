@@ -1,6 +1,6 @@
 # Webpack + Typescript + Jest starter
 
-Starter kit for frontend development using typescript.
+Minimalist starter kit for frontend development using typescript.
 
 ## Scripts
 
